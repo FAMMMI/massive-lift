@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "Shoulder and Arms",
+        "price": "600",
+        "description": "Training shoulders and biceps together can be an effective way to structure your workouts, especially because some bicep exercises involve parts of the shoulder and vice versa.",
+        "img": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/bodybuilder-strong-man-pumping-up-back-muscles-royalty-free-image-1632946682.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Belly And Body ",
+        "price": "300",
+        "description": "The Belly Gym offers cutting-edge and well maintained fitness equipment & facilities. I will help you enjoy burning away those extra calories. Burning calories from your belly  will make you looks better.",
+        "img": "https://www.mensjournal.com/wp-content/uploads/mf/dumbbell-bench-1280.jpg?w=1200&h=960&crop=1&quality=86&strip=all"
+    },
+    {
+        "id": 3,
+        "name": "Back and Thigh ",
+        "price": "700",
+        "description": "The back and thigh exercise is very important and effective for the body because those parts are directly connected to our backbone . So , our body structure should be strong enough to carry our weight.",
+        "img": "https://fittingguy.com/wp-content/uploads/2021/07/featured-image-2.jpg"
+    }
+]
