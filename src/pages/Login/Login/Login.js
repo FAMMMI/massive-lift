@@ -7,6 +7,7 @@ import Loading from '../../Shared/Loading/Loading';
 import SocialLogin from '../SocialLogin/SoacialLogin';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import './Login.css';
 
 
 
@@ -17,7 +18,7 @@ const Login = () => {
     const navigate = useNavigate();
     const location = useLocation();
 
-    let from = location.state?.from?.pathname || "/";
+    let from = location.state?.from?.pathname || "/home";
     let errorElement;
     const [
         signInWithEmailAndPassword,
@@ -37,7 +38,18 @@ const Login = () => {
     }
 
     if (error) {
-        errorElement = <p className='text-danger'>Error: {error?.message}</p>
+        switch (error?.code) {
+            case "auth/wrong-email":
+                errorElement = <p className='text-danger'>Give a valid email!</p>
+                break;
+
+            case "auth/wrong-password":
+                errorElement = <p className='text-danger'>Wrong Password</p>
+                break;
+            default:
+                errorElement = <p className='text-danger'>Something went wrong.</p>
+        }
+        // errorElement = <p className='text-danger'>Error: {error?.message}</p>
     }
 
     const handleSubmit = event => {
@@ -64,8 +76,8 @@ const Login = () => {
     }
 
     return (
-        <div className='container w-50 mx-auto'>
-            <h2 className='text-primary text-center mt-2'>Please Login</h2>
+        <div className='container w-50 mx-auto login-container'>
+            <h2 className='login-header text-center mt-2'>Please Login</h2>
             <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Control ref={emailRef} type="email" placeholder="Enter email" required />
@@ -73,13 +85,12 @@ const Login = () => {
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
                 </Form.Group>
-                <Button variant="primary w-50 mx-auto d-block mb-2" type="submit">
-                    Login
+                <Button variant=" w-50 mx-auto d-block mb-2 " type="submit" className='login-btn text-center'>Login
                 </Button>
             </Form>
             {errorElement}
-            <p>New to Genius Car? <Link to="/register" className='text-primary pe-auto text-decoration-none' onClick={navigateRegister}>Please Register</Link> </p>
-            <p>Forget Password? <button className='btn btn-link text-primary pe-auto text-decoration-none' onClick={resetPassword}>Reset Password</button> </p>
+            <p>New to Genius Car? <Link to="/register" className='text-primary pe-auto text-decoration-none' onClick={navigateRegister}>Please Register</Link></p>
+            <p><small>Forget Password? <button className='btn btn-link text-primary pe-auto text-decoration-none' onClick={resetPassword}>Reset Password</button> </small></p>
             <SocialLogin></SocialLogin>
             <ToastContainer />
 
