@@ -2,13 +2,17 @@ import React from 'react';
 
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import Loading from '../../Shared/Loading/Loading';
 import google from '../../../images/icons/google.png';
+import './SocialLogin.css'
 
 const SocialLogin = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
     const navigate = useNavigate();
+    const location = useLocation()
+
+    let from = location.state?.from?.pathname || "/home";
 
     let errorElement;
 
@@ -16,13 +20,14 @@ const SocialLogin = () => {
         return <Loading></Loading>
     }
 
+    if (user) {
+        navigate(from, { replace: true });
+    }
+
     if (error) {
         errorElement = <p className='text-danger'>Error: {error?.message} </p>
     }
 
-    if (user) {
-        navigate('/home');
-    }
 
     return (
         <div >
@@ -35,7 +40,7 @@ const SocialLogin = () => {
             <div className=''>
                 <button
                     onClick={() => signInWithGoogle()}
-                    className=' btn bg-secondary w-50 d-block mx-auto my-2'>
+                    className=' btn social-register-btn w-50 d-block mx-auto my-2'>
                     <img style={{ width: '30px' }} src={google} alt="" />
                     <span className='px-2'>Google Sign In</span>
                 </button>

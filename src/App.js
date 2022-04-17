@@ -5,6 +5,7 @@ import About from './pages/About/About';
 import Blog from './pages/Blog/Blog';
 import Checkout from './pages/Checkout/Checkout';
 import Home from './pages/Home/Home/Home';
+import Photos from './pages/Home/Photos/Photos';
 import Login from './pages/Login/Login/Login';
 import Register from './pages/Login/Register/Register';
 import RequireAuth from './pages/Login/RequireAuth/RequireAuth';
@@ -25,6 +26,7 @@ function App() {
           </RequireAuth>
         }></Route>
         <Route path="/register" element={<Register></Register>}></Route>
+        <Route path="/photos" element={<Photos></Photos>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/about" element={<About></About>}></Route>
         <Route path="/blog" element={<Blog></Blog>}></Route>

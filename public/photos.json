@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "img": "https://images.livemint.com/img/2021/08/10/1200x900/20201025_MUM-PC-MN_Gym_Reopen_015_1628583917333_1628583934428.JPG"
+    },
+    {
+        "id": 2,
+        "img": "https://api.time.com/wp-content/uploads/2020/03/gym-coronavirus.jpg?w=824&quality=70"
+    },
+    {
+        "id": 3,
+        "img": "https://learnenglish.britishcouncil.org/sites/podcasts/files/RS4967_78781313-hig.jpg"
+    },
+    {
+        "id": 4,
+        "img": "https://www.vicnews.com/wp-content/uploads/2021/12/27679548_web1_211230-CDT-Gym-Essential-Status-K_1.jpg"
+    },
+    {
+        "id": 5,
+        "img": "https://img.etimg.com/thumb/width-1200,height-900,imgsize-813970,resizemode-1,msid-74794523/news/politics-and-nation/coronavirus-fitness-industry-crumbles-as-gyms-shut-down-livelihoods-hit.jpg"
+    },
+    {
+        "id": 6,
+        "img": "https://media.blogto.com/articles/20210221-KXCoffeeGym29.jpg?w=2048&cmd=resize_then_crop&height=1365&quality=70"
+    }
+]

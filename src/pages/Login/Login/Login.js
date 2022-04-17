@@ -49,7 +49,7 @@ const Login = () => {
             default:
                 errorElement = <p className='text-danger'>Something went wrong.</p>
         }
-        // errorElement = <p className='text-danger'>Error: {error?.message}</p>
+
     }
 
     const handleSubmit = event => {
@@ -76,21 +76,24 @@ const Login = () => {
     }
 
     return (
-        <div className='container w-50 mx-auto login-container'>
+        <div className=' w-50 mx-auto login-container'>
             <h2 className='login-header text-center mt-2'>Please Login</h2>
             <Form onSubmit={handleSubmit}>
-                <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Group className="mb-3 mx-auto w-50" controlId="formBasicEmail">
                     <Form.Control ref={emailRef} type="email" placeholder="Enter email" required />
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Form.Group className="mb-3 mx-auto w-50" controlId="formBasicPassword">
                     <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
                 </Form.Group>
-                <Button variant=" w-50 mx-auto d-block mb-2 " type="submit" className='login-btn text-center'>Login
+                <Button variant=" w-25 mx-auto d-block mb-2 " type="submit" className='login-btn text-center'>Login
                 </Button>
             </Form>
             {errorElement}
-            <p>New to Genius Car? <Link to="/register" className='text-primary pe-auto text-decoration-none' onClick={navigateRegister}>Please Register</Link></p>
+
+            <p >New to Genius Car? <Link to="/register" className='text-primary pe-auto text-decoration-none' onClick={navigateRegister}>Please Register</Link></p>
             <p><small>Forget Password? <button className='btn btn-link text-primary pe-auto text-decoration-none' onClick={resetPassword}>Reset Password</button> </small></p>
+
+
             <SocialLogin></SocialLogin>
             <ToastContainer />
 
