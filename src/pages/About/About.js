@@ -6,7 +6,7 @@ const About = () => {
 
         <div>
             <div className='text-center p-3'>
-                <img className='w-50' src={pic1} alt="" />
+                <img className='w-25' src={pic1} alt="" />
             </div>
 
             <div className='text-center'>

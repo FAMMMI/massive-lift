@@ -19,7 +19,7 @@ const Service = ({ service }) => {
             <p><small>{description}</small></p>
 
             <Card.Footer className='border-0'>
-                <button onClick={() => navigateToServiceDetail(id)} className='btn btn-primary'>Book: {name}</button>
+                <button onClick={() => navigateToServiceDetail(id)} className='btn btn-primary'>Book Now</button>
             </Card.Footer>
         </div>
     );
