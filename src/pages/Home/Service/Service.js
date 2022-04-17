@@ -13,13 +13,13 @@ const Service = ({ service }) => {
     }
     return (
         <div className='service'>
-            <img className='image img-fluid' src={img} alt="" />
+            <img className='image img-fluid service-img' src={img} alt="" />
             <h2 className='p-2'>{name}</h2>
             <p>Price: ${price}</p>
             <p><small>{description}</small></p>
 
-            <Card.Footer className='border-0'>
-                <button onClick={() => navigateToServiceDetail(id)} className='btn btn-primary'>Book Now</button>
+            <Card.Footer className='border-0 text-center'>
+                <button onClick={() => navigateToServiceDetail(id)} className='btn btn-primary service-btn'>Book Now</button>
             </Card.Footer>
         </div>
     );

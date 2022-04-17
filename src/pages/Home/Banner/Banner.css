@@ -1,15 +1,4 @@
-.service {
-
-    background-color: bisque;
-    border: 1px solid rgb(226, 151, 58);
-    border-radius: 4px;
-    padding: 4px;
-    text-decoration: none;
-}
-
-
-
-.service-btn {
+.services-btn {
     background-color: rgb(158, 86, 34);
     color: bisque;
     border: 0;
@@ -19,7 +8,12 @@
     text-decoration: none;
 }
 
-.service-btn:hover {
+.card-img {
+    height: 600px;
+    width: auto;
+}
+
+.services-btn:hover {
     background-color: brown;
     color: white;
 }
