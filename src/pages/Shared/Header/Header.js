@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import { signOut } from 'firebase/auth';
@@ -16,7 +16,9 @@ const Header = () => {
         <div >
             <Navbar collapseOnSelect expand="lg" className='navbar' variant="dark" >
                 <Container>
-                    <Navbar.Brand as={Link} to='/home'>Massive Lift-Up</Navbar.Brand>
+                    <Navbar.Brand as={Link} to='/home'>
+                        <img style={{ width: "50px", padding: "4px" }} src="https://i.ibb.co/XzP57BP/logo-2.png" alt="" />
+                        Massive Lift-Up</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
@@ -24,9 +26,10 @@ const Header = () => {
                             <Nav.Link href="home#photos">Photo Gallery</Nav.Link>
 
                         </Nav>
+
                         <Nav>
-                            <Nav.Link as={Link} to="about">About</Nav.Link>
-                            <Nav.Link as={Link} to="blog">Blog</Nav.Link>
+                            <Nav.Link as={Link} to="/about">About</Nav.Link>
+                            <Nav.Link as={Link} to="/blog">Blog</Nav.Link>
                             {
                                 user ?
                                     <button className='btn btn-link text-white text-decoration-none' onClick={handleSignOut}>sign out</button>

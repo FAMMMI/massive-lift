@@ -1,3 +1,9 @@
+.registration-header {
+    color: brown;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
 .register-form {
     margin: 0 auto;
     padding: 10px;
@@ -20,6 +26,10 @@
     color: brown;
 }
 
+.registration-container {
+    display: flex;
+}
+
 .register-btn {
     background-color: rgb(158, 86, 34);
     color: bisque;
@@ -35,4 +45,10 @@
 
     background-color: brown;
     color: white;
+}
+
+@media only screen and (max-width:576px) {
+    .registration-carousel {
+        display: none;
+    }
 }

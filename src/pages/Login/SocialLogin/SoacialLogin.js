@@ -25,7 +25,13 @@ const SocialLogin = () => {
     }
 
     if (error) {
-        errorElement = <p className='text-danger'>Error: {error?.message} </p>
+        switch (error?.code) {
+            case "auth/popup-closed-by-user":
+                errorElement = <p className='text-danger'>Pop-up has been closed before initialization. Please do not close popup.</p>
+                break;
+            default:
+                errorElement = <p className='text-danger'>Something went wrong.</p>
+        }
     }
 
 

@@ -5,6 +5,7 @@ import './Register.css';
 import auth from '../../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
 import SocialLogin from '../SocialLogin/SoacialLogin';
+import { Card } from 'react-bootstrap';
 
 const Register = () => {
     const [agree, setAgree] = useState(false);
@@ -43,25 +44,35 @@ const Register = () => {
     }
 
     return (
-        <div className='register-form'>
-            <h2 className='register-header' style={{ textAlign: 'center' }}>Please Register</h2>
-            <form onSubmit={handleRegister}>
-                <input className='w-75 mx-auto' type="text" name="name" id="" placeholder='Your Name' />
+        <div>
+            <p className='registration-header mt-4 mb-3 text-center'>Welcome To Massive Lift-Up</p>
+            <div className='registration-container'>
+                <div className='registration-carousel w-50 ps-3'>
+                    <Card className="bg-dark text-white">
+                        <Card.Img style={{ height: "600px" }} src="https://i.pinimg.com/originals/55/e8/ed/55e8edbfcbfdff46e531d4cdbeeee005.jpg" alt="Card image" />
+                    </Card>
+                </div>
+                <div className='register-form'>
+                    <h2 className='register-header' style={{ textAlign: 'center' }}>Please Register</h2>
+                    <form onSubmit={handleRegister}>
+                        <input className='w-75 mx-auto' type="text" name="name" id="" placeholder='Your Name' />
 
-                <input className='w-75 mx-auto' type="email" name="email" id="" placeholder='Email Address' required />
+                        <input className='w-75 mx-auto' type="email" name="email" id="" placeholder='Email Address' required />
 
-                <input className='w-75 mx-auto' type="password" name="password" id="" placeholder='Password' required />
-                <input onClick={() => setAgree(!agree)} type="checkbox" name="terms" id="terms" />
-                <label className={`ps-2 ${agree ? '' : 'text-danger'}`} htmlFor="terms">Accept Genius Car Terms and Conditions</label>
-                <input
-                    disabled={!agree}
-                    className='w-50 mx-auto btn  mt-2 register-btn'
-                    type="submit"
-                    value="Register" />
-            </form>
-            <p>Already have an account? <Link to="/login" className='text-primary pe-auto text-decoration-none' onClick={navigateLogin}>Please Login</Link> </p>
-            <SocialLogin></SocialLogin>
+                        <input className='w-75 mx-auto' type="password" name="password" id="" placeholder='Password' required />
+                        <input onClick={() => setAgree(!agree)} type="checkbox" name="terms" id="terms" />
+                        <label className={`ps-2 ${agree ? '' : 'text-danger'}`} htmlFor="terms">Accept Genius Car Terms and Conditions</label>
+                        <input
+                            disabled={!agree}
+                            className='w-50 mx-auto btn  mt-2 register-btn'
+                            type="submit"
+                            value="Register" />
+                    </form>
+                    <p>Already have an account? <Link to="/login" className='text-primary pe-auto text-decoration-none' onClick={navigateLogin}>Please Login</Link> </p>
+                    <SocialLogin></SocialLogin>
 
+                </div>
+            </div>
         </div>
     );
 };
