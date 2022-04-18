@@ -16,3 +16,9 @@
 .email:hover {
     text-decoration: underline;
 }
+
+@media only screen and (max-width:576px) {
+    .contact-detail {
+        display: none;
+    }
+}
