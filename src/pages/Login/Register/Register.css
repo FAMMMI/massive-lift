@@ -29,3 +29,10 @@
     border-radius: 4px;
     text-decoration: none;
 }
+
+.register-btn:hover {
+
+
+    background-color: brown;
+    color: white;
+}

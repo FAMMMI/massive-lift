@@ -2,3 +2,17 @@
     background-color: rgb(150, 65, 5);
     bottom: 0;
 }
+
+.footer-detail {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 15px;
+}
+
+.email {
+    text-decoration: none;
+}
+
+.email:hover {
+    text-decoration: underline;
+}
