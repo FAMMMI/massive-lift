@@ -95,7 +95,7 @@ const Login = () => {
 
 
             <SocialLogin></SocialLogin>
-            <ToastContainer />
+            <ToastContainer></ToastContainer>
 
         </div>
     );

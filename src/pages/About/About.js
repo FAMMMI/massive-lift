@@ -1,12 +1,12 @@
 import React from 'react';
-import pic1 from '../../images/pic01.png';
+
 
 const About = () => {
     return (
 
         <div>
             <div className='text-center p-3'>
-                <img className='w-25' src={pic1} alt="" />
+                <img className='w-25' src="https://i.ibb.co/fvhfLVN/dp.png" alt="" />
             </div>
 
             <div className='text-center'>

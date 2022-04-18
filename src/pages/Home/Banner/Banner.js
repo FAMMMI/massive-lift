@@ -4,7 +4,7 @@ import './Banner.css'
 
 
 
-import banner3 from '../../../images/banner03.jpg';
+// import banner3 from '../../../images/banner03.jpg';
 import banner2 from '../../../images/banner02.jpg';
 import banner1 from '../../../images/banner01.jpg';
 
@@ -42,7 +42,7 @@ const Banner = () => {
                 <img
                     style={{ height: "600px" }}
                     className="d-block w-100"
-                    src={banner3}
+                    src="https://i.ibb.co/82WFqqN/banner03.png"
                     alt="Third slide"
                 />
 
