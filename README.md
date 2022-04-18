@@ -3,20 +3,20 @@
 Massive Lift-Up [https://assignment-ten-1260c.web.app](https://assignment-ten-1260c.web.app).
 ## Features And Functionalities
 
--- This project is related to a gym trainer where people can register by their email or gmail id and visit the website.
--- People can choose what service they want and then proceed their package.
--- They also explore our gallery to have a clear picture about us .
--- People can update their password if they forget it , and also there is a authentication system .
--- This project is user friendly as people can visit everywhere of this site by using header navbar .
+- This project is related to a gym trainer where people can register by their email or gmail id and visit the website.
+- People can choose what service they want and then proceed their package.
+- They also explore our gallery to have a clear picture about us .
+- People can update their password if they forget it , and also there is a authentication system .
+- This project is user friendly as people can visit everywhere of this site by using header navbar .
 
 ## Framework and Technology Used
 
--- Firebase
--- React Router dom
--- React Toastify 
--- React Firebase hook
--- React Bootstrap
--- Firebase Deployment
+- Firebase
+- React Router dom
+- React Toastify 
+- React Firebase hook
+- React Bootstrap
+- Firebase Deployment
 
 ## Available Scripts
 
