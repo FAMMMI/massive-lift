@@ -46,10 +46,10 @@ const Register = () => {
     return (
         <div>
             <p className='registration-header mt-4 mb-3 text-center'>Welcome To Massive Lift-Up</p>
-            <div className='registration-container'>
-                <div className='registration-carousel w-50 ps-3'>
+            <div className='login-signup-container'>
+                <div className='w-50 ps-3'>
                     <Card className="bg-dark text-white">
-                        <Card.Img style={{ height: "600px" }} src="https://i.pinimg.com/originals/55/e8/ed/55e8edbfcbfdff46e531d4cdbeeee005.jpg" alt="Card image" />
+                        <Card.Img style={{ height: "600px" }} src="https://lh3.googleusercontent.com/ATxo02OFQYGZtOjsCDpWvxPZL8fXjIf1egX566F12GfugbDiawkX2lSiqejp4FThxiYm" alt="Card image" />
                     </Card>
                 </div>
                 <div className='register-form'>

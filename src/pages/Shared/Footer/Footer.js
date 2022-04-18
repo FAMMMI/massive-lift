@@ -13,6 +13,10 @@ const Footer = () => {
 
             <div className='footer-detail'>
                 <div className='text-white'>
+                    <p className='mb-0'>
+                        <img style={{ width: "60px", margin: "5px" }} src="https://i.ibb.co/XzP57BP/logo-2.png" alt="" />
+                        <b>Massive Lift-Up</b>
+                    </p>
                     <p className='pb-1 mb-0'>Contact with us :</p>
                     <p className='pb-1 mb-0'>Phone: 01515681709</p>
                     <p className='pb-1 mb-0'>Email: <a className='email text-white' href="https://www.naimfami@gmail.com">naimfami@gmail.com</a> </p>

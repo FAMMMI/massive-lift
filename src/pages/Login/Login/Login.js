@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { Button, Form } from 'react-bootstrap';
+import { Button, Card, Form } from 'react-bootstrap';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
@@ -76,28 +76,40 @@ const Login = () => {
     }
 
     return (
-        <div className=' w-50 mx-auto login-container'>
-            <h2 className='login-header text-center mt-2'>Please Login</h2>
-            <Form onSubmit={handleSubmit}>
-                <Form.Group className="mb-3 mx-auto w-50" controlId="formBasicEmail">
-                    <Form.Control ref={emailRef} type="email" placeholder="Enter email" required />
-                </Form.Group>
-                <Form.Group className="mb-3 mx-auto w-50" controlId="formBasicPassword">
-                    <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
-                </Form.Group>
-                <Button variant=" w-25 mx-auto d-block mb-2 " type="submit" className='login-btn text-center'>Login
-                </Button>
-            </Form>
-            {errorElement}
+        <div>
+            <p className='registration-header mt-4 mb-3 text-center'>Login To Massive Lift-Up</p>
+            <div className='login-signup-container'>
 
-            <p >New to Genius Car? <Link to="/register" className='text-primary pe-auto text-decoration-none' onClick={navigateRegister}>Please Register</Link></p>
-            <p><small>Forget Password? <button className='btn btn-link text-primary pe-auto text-decoration-none' onClick={resetPassword}>Reset Password</button> </small></p>
+                <div className=' w-50 ps-3 pe-3'>
+                    <Card className="bg-dark text-white">
+                        <Card.Img style={{ height: "600px" }} src="https://i.pinimg.com/736x/49/3f/2c/493f2c38da2a8346655ba88684a5791f.jpg" alt="Card image" />
+                    </Card>
+                </div>
+
+                <div className=' w-50 mx-auto login-container '>
+                    <h2 className='login-header text-center mt-2'>Please Login</h2>
+                    <Form onSubmit={handleSubmit}>
+                        <Form.Group className="mb-3 mx-auto w-50" controlId="formBasicEmail">
+                            <Form.Control ref={emailRef} type="email" placeholder="Enter email" required />
+                        </Form.Group>
+                        <Form.Group className="mb-3 mx-auto w-50" controlId="formBasicPassword">
+                            <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
+                        </Form.Group>
+                        <Button variant=" w-25 mx-auto d-block mb-2 " type="submit" className='login-btn text-center'>Login
+                        </Button>
+                    </Form>
+                    {errorElement}
+
+                    <p >New to Genius Car? <Link to="/register" className='text-primary pe-auto text-decoration-none' onClick={navigateRegister}>Please Register</Link></p>
+                    <p><small>Forget Password? <button className='btn btn-link text-primary pe-auto text-decoration-none' onClick={resetPassword}>Reset Password</button> </small></p>
 
 
-            <SocialLogin></SocialLogin>
-            <ToastContainer></ToastContainer>
+                    <SocialLogin></SocialLogin>
+                    <ToastContainer></ToastContainer>
 
-        </div>
+                </div>
+            </div>
+        </div >
     );
 };
 
