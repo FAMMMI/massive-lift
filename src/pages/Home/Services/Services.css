@@ -8,10 +8,7 @@
     grid-gap: 20px;
 }
 
-.image {
-    height: 240px;
-    width: 400px;
-}
+
 
 /* make services responsive */
 @media only screen and (max-width:576px) {

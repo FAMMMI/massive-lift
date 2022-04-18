@@ -12,15 +12,15 @@ const Service = ({ service }) => {
         navigate(`/service/${id}`);
     }
     return (
-        <div className='service'>
-            <img className='image img-fluid service-img mx-auto' src={img} alt="" />
+        <div className='service mx-auto'>
+            <img className='image img-fluid service-img p-0' src={img} alt="" />
             <h2 className='p-2'>{name}</h2>
             <p>Price: ${price}</p>
             <p><small>{description}</small></p>
 
-            <Card.Footer className='border-0 text-center'>
-                <button onClick={() => navigateToServiceDetail(id)} className='btn btn-primary service-btn'>Book Now</button>
-            </Card.Footer>
+
+            <div className='text-center'> <button onClick={() => navigateToServiceDetail(id)} className='btn btn-primary service-btn'>Book Now</button></div>
+
         </div>
     );
 };

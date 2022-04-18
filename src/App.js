@@ -15,7 +15,7 @@ import NotFound from './pages/Shared/NotFound/NotFound';
 
 function App() {
   return (
-    <div >
+    <div className='web-container'>
       <Header></Header>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
